@@ -22,4 +22,10 @@ X_ = poly.fit_transform(x)
 
 clf = linear_model.LinearRegression()
 clf.fit(X_, y)
-print(y-clf.predict(X_))
+#print(y-clf.predict(X_))
+
+print('predicting..')
+x_test = np.matrix([[12183, 226316]])
+print(x_test)
+x_test_ = poly.fit_transform(x_test)
+print(clf.predict(x_test_))
